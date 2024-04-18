@@ -22,8 +22,8 @@ var (
 func init() {
 	MainNetParams = chaincfg.MainNetParams
 	MainNetParams.Net = MainnetMagic
-	MainNetParams.PubKeyHashAddrID = []byte{50} // Lazy R -> M fix for MEWC
-	MainNetParams.ScriptHashAddrID = []byte{122}
+	MainNetParams.PubKeyHashAddrID = []byte{55} // Lazy P for PePePoW
+	MainNetParams.ScriptHashAddrID = []byte{16}
 
 	TestNetParams = chaincfg.TestNet3Params
 	TestNetParams.Net = TestnetMagic

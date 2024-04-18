@@ -1,9 +1,9 @@
 {
   "coin": {
-    "name": "MeowCoin",
-    "shortcut": "MEWC",
-    "label": "MeowCoin",
-    "alias": "meowcoin"
+    "name": "PePePow",
+    "shortcut": "PEPEW",
+    "label": "PePePow",
+    "alias": "pepepow"
   },
   "ports": {
     "backend_rpc": 8070,
@@ -19,16 +19,16 @@
     "message_queue_binding_template": "tcp://127.0.0.1:{{.Ports.BackendMessageQueue}}"
   },
   "backend": {
-    "package_name": "backend-meowcoin",
+    "package_name": "backend-pepepow",
     "package_revision": "satoshilabs-1",
-    "system_user": "meowcoin",
-    "version": "1.0.3",
-    "binary_url": "https://github.com/JustAResearcher/Meowcoin/releases/download/V1.0.3/MEOW-1.0.3-CLI-x86_64-linux-gnu.tar.gz",
+    "system_user": "pepepow",
+    "version": "2.4.7.1",
+    "binary_url": "https://github.com/MattF42/PePe-core/releases/download/v2.4.7.1/PEPEPOW-v2.4.7.1--release-cli-x86_64-linux-gnu.tgz",
     "verification_type": "sha256",
-    "verification_source": "a372194140893cc0f693c76513f4d2df1915448008bc34a726b55bff44bffab6",
+    "verification_source": "02afd3722da711dc57e8ffd42a191ac85517f725ec8a8b44fc123b8b20b3d2b0",
     "extract_command": "tar -C backend -xf",
     "exclude_files": [],
-    "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/meowcoind -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
+    "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/PEPEPOWd -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
     "logrotate_files_template": "{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/*.log",
     "postinst_script_template": "",
     "service_type": "forking",
@@ -40,19 +40,19 @@
     "additional_params": {
       "deprecatedrpc": "estimatefee",
       "addnode": [
-        "222.180.4.126",
-        "178.208.227.6",
-        "178.120.60.92",
-        "95.179.203.112",
-        "173.249.15.154",
-        "176.124.138.101",
-        "124.223.201.142"
+        "101.37.28.146",
+        "109.205.212.243",
+        "121.36.243.160",
+        "132.145.29.145",
+        "141.147.71.107",
+        "141.98.90.157",
+        "54.39.49.96"
       ]
     }
   },
   "blockbook": {
-    "package_name": "blockbook-meowcoin",
-    "system_user": "blockbook-meowcoin",
+    "package_name": "blockbook-pepepow",
+    "system_user": "blockbook-pepepow",
     "internal_binding_template": ":{{.Ports.BlockbookInternal}}",
     "public_binding_template": ":{{.Ports.BlockbookPublic}}",
     "explorer_url": "",
@@ -66,12 +66,12 @@
       "slip44": 175,
       "additional_params": {
         "fiat_rates": "coingecko",
-        "fiat_rates_params": "{\"url\": \"https://api.coingecko.com/api/v3\", \"coin\": \"meowcoin\", \"periodSeconds\": 60}"
+        "fiat_rates_params": "{\"url\": \"https://api.coingecko.com/api/v3\", \"coin\": \"pepepow\", \"periodSeconds\": 60}"
       }
     }
   },
   "meta": {
-    "package_maintainer": "Alpha",
-    "package_maintainer_email": "meowcoindev@gmail.com"
+    "package_maintainer": "Team",
+    "package_maintainer_email": "dev@-placeholder.com"
   }
 }
