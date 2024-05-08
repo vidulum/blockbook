@@ -134,7 +134,7 @@ func init() {
 	BlockChainFactories["ECash"] = ecash.NewECashRPC
 	BlockChainFactories["Avalanche"] = avalanche.NewAvalancheRPC
 	BlockChainFactories["Avalanche Archive"] = avalanche.NewAvalancheRPC
-	BlockChainFactories["MeowCoin"] = ravencoin.NewRavencoinRPC
+	BlockChainFactories["CloreAI"] = ravencoin.NewRavencoinRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file
